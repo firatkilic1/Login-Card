@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <button class="open-btn">Login</button>
+
+    <div class="overlay" id="overlay">
+        <div class="login-box">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Welcome Back</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" required placeholder=" " />
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required placeholder=" " />
+                    <label>Password</label>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const overlay = document.getElementById("overlay");
+        document.querySelector(".open-btn").onclick = () => {
+            overlay.classList.add("show");
+        };
+        function closePopup() {
+            overlay.classList.remove("show");
+        }
+    </script>
+
+</body>
+
+</html>
